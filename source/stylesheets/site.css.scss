@@ -1,0 +1,29 @@
+@charset "utf-8";
+@import "normalize";
+
+body {
+  position: relative;
+  background: #FFFFFA;
+  text-align: right;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1em;
+}
+
+h1 {
+  color: rgba(0,0,0,0.5);
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.8em;
+  font-weight: 400;
+  margin: 0;
+}
+
+.container {
+  position: absolute;
+  left: 15%;
+  width: 60%;
+}
+
+ul.unstyled {
+  list-style: none;
+  padding: 0;
+}
