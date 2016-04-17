@@ -8,10 +8,11 @@
     -# Use title if it's in the page YAML frontmatter
     %title= current_page.data.title || "Middleman"
 
-    %link{:href => '//fonts.googleapis.com/css?family=Lato:300,400', :rel => 'stylesheet', :type => 'text/css'}
+    %link{:href => '//fonts.googleapis.com/css?family=Lato:400,700', :rel => 'stylesheet', :type => 'text/css'}
+    %script{:src => "https://code.jquery.com/jquery-1.12.3.min.js", :integrity => "sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=", :crossorigin => "anonymous"}
 
     = stylesheet_link_tag :site
-    = javascript_include_tag :all
+    = javascript_include_tag :application
 
   %body{:class => (page_classes)}
     .container
