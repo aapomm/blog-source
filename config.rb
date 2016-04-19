@@ -30,6 +30,14 @@ end
 
 activate :sprockets
 
+activate :deploy do |deploy|
+  deploy.deploy_method = :git
+  deploy.branch = 'master'
+  deploy.strategy = :force_push
+
+  deploy.build_before = true
+end
+
 ###
 # Helpers
 ###
