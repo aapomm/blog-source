@@ -1,5 +1,5 @@
 ---
-title: Blog ni Aaron
+title: aaron's blog
 ---
 
 %div.index
@@ -11,3 +11,6 @@ title: Blog ni Aaron
         = link_to article.title, article.url
         .div
           %small= article.date.strftime('%b %e %Y')
+
+%footer
+  = link_to 'about the author', 'author.html'

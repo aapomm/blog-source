@@ -35,6 +35,11 @@ h2 {
   letter-spacing: 8px;
 }
 
+a {
+  color: #77B6FE;
+  text-decoration: none;
+}
+
 p {
   text-indent: 5%;
   text-align: justify;
@@ -48,6 +53,12 @@ blockquote {
   font-style: italic;
   font-size: 0.8em;
   color: $gray;
+}
+
+footer {
+  position: fixed;
+  bottom: 30px;
+  right: 20%;
 }
 
 small {
@@ -88,4 +99,8 @@ figure {
   background-color: $black;
   width: 30px;
   height: 30px;
+}
+
+#profile-canvas {
+  background-color: white;
 }
