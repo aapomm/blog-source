@@ -66,9 +66,18 @@ small {
   color: $gray;
 }
 
-ul.unstyled {
-  list-style: none;
-  padding: 0;
+ul {
+  &.unstyled {
+    list-style: none;
+    padding: 0;
+  }
+
+  &.right-align {
+    > li:after {
+      padding-left: 5px;
+      content: '◄';
+    }
+  }
 }
 
 figure {
@@ -99,8 +108,4 @@ figure {
   background-color: $black;
   width: 30px;
   height: 30px;
-}
-
-#profile-canvas {
-  background-color: white;
 }

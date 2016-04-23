@@ -1,28 +1,48 @@
-// SEE: http://www.williammalone.com/articles/create-html5-canvas-javascript-drawing-app/
 $(function(){
 
+  //
+  // Setup Canvas
+  //
   var $canvas = $('#profile-canvas');
   $canvas[0].style.cursor = 'default';
 
   var context = $canvas[0].getContext('2d');
+  context.strokeStyle = "#000000";
+  context.lineJoin = "round";
+  context.lineWidth = 5;
+
   var clickX = [];
   var clickY = [];
   var clickDrag = [];
   var paint = false;
 
+
+
+  //
+  // Load Image onto Canvas
+  //
   var img = new Image();
   img.onload = function(){
     context.drawImage(img, 0, 0);
   };
-  img.src = 'images/aaron_manaloto.jpg';
+  img.src = 'images/aaron_manaloto.png';
 
+
+
+  //
+  // Define functions
+  //
   var addClick = function(x, y, dragging) {
     clickX.push(x);
     clickY.push(y);
     clickDrag.push(dragging);
   }
 
-  var releaseBrush = function(){ paint = false; };
+  var releaseBrush = function(){
+    clickX = [];
+    clickY = [];
+    paint = false;
+  };
 
   var draw = function(e, dragging){
     var offset = $(this).offset();
@@ -34,17 +54,13 @@ $(function(){
   };
 
   var redraw = function(){
-    context.strokeStyle = "#000000";
-    context.lineJoin = "round";
-    context.lineWidth = 5;
-
     for (var i=0; i < clickX.length; i++) {
       context.beginPath();
-      if (clickDrag[i] && i) {
+      if (clickDrag[i] && i > 0) {
         context.moveTo(clickX[i-1], clickY[i-1]);
       }
       else{
-        context.moveTo(clickX[i]-1, clickY[i]);
+        context.moveTo(clickX[i]-1, clickY[i]-1);
       }
       context.lineTo(clickX[i], clickY[i]);
       context.closePath();
@@ -52,6 +68,11 @@ $(function(){
     }
   };
 
+
+
+  //
+  // Set Handlers
+  //
   $canvas.mousedown(function(e){
     draw.call(this, e, false);
     paint = true;
@@ -61,7 +82,6 @@ $(function(){
     if (paint) { draw.call(this, e, true); }
   });
 
-  $canvas.mouseup(releaseBrush);
-  $canvas.mouseleave(releaseBrush);
+  $(document).mouseup(releaseBrush);
 
 });
