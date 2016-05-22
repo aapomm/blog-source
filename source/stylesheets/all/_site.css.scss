@@ -1,13 +1,10 @@
 @charset "utf-8";
 @import "normalize";
-
-$darkgray: #8B8787;
-$gray: #A7A4A4;
-$black: #413F3E;
+@import "colors";
 
 body {
   position: relative;
-  background: #E4E4E4;
+  background-color: $base-blue;
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 21px;
   text-align: right;
@@ -16,14 +13,19 @@ body {
 
 .container {
   position: absolute;
-  left: 20%;
+  left: 16%;
   width: 60%;
+  background-color: white;
 
-  padding: 50px 0;
+  padding: 50px 4%;
+
+  /* box-shadow: -2px 2px 2px 1px #cccccc; */
+  border: 3px solid;
+  border-color: #e5e6e9 #dfe0e4 #d0d1d5;
 }
 
 h1 {
-  color: $darkgray;
+  color: $black;
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1.8em;
   font-weight: 700;
@@ -36,7 +38,7 @@ h2 {
 }
 
 a {
-  color: #77B6FE;
+  color: $red;
   text-decoration: none;
 }
 
@@ -47,12 +49,13 @@ p {
 }
 
 blockquote {
-  border-left: 3px solid $gray;
+  border-left: 3px solid $black;
   padding-left: 10px;
 
   font-style: italic;
   font-size: 0.8em;
-  color: $gray;
+  color: $black;
+  opacity: 0.65;
 }
 
 footer {
@@ -63,7 +66,7 @@ footer {
 
 small {
   font-size: 0.5em;
-  color: $gray;
+  color: $black;
 }
 
 ul {
@@ -108,4 +111,8 @@ figure {
   background-color: $black;
   width: 30px;
   height: 30px;
+}
+
+.full-height {
+  height: 85vh;
 }
