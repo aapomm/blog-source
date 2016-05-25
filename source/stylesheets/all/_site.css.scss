@@ -7,7 +7,6 @@ body {
   background-color: $base-blue;
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 21px;
-  text-align: right;
   color: $black;
 }
 
@@ -19,7 +18,6 @@ body {
 
   padding: 50px 4%;
 
-  /* box-shadow: -2px 2px 2px 1px #cccccc; */
   border: 3px solid;
   border-color: #e5e6e9 #dfe0e4 #d0d1d5;
 }
@@ -30,11 +28,13 @@ h1 {
   font-size: 1.8em;
   font-weight: 700;
   margin: 0;
+  text-align: right;
 }
 
 h2 {
   margin-top: 50px;
   letter-spacing: 8px;
+  text-align: right;
 }
 
 a {
@@ -53,7 +53,7 @@ blockquote {
   padding-left: 10px;
 
   font-style: italic;
-  font-size: 0.8em;
+  font-size: 0.75em;
   color: $black;
   opacity: 0.65;
 }
@@ -75,7 +75,7 @@ ul {
     padding: 0;
   }
 
-  &.right-align {
+  &.right-align-bullet {
     > li:after {
       padding-left: 5px;
       content: '◄';
@@ -102,6 +102,10 @@ figure {
   }
 }
 
+pre.highlight {
+  font-size: 0.75em;
+}
+
 .hidden {
   visibility: hidden;
 }
@@ -115,4 +119,8 @@ figure {
 
 .full-height {
   height: 85vh;
+}
+
+.right-align {
+  text-align: right;
 }

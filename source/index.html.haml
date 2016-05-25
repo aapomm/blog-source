@@ -3,9 +3,9 @@ title: aaron's blog
 ---
 
 .full-height
-  %h1 Index
+  %h1 Home
 
-  %ul.unstyled
+  %ul.unstyled.right-align
     - blog.articles.each do |article|
       %li
         = link_to article.title, article.url

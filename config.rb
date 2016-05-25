@@ -18,6 +18,7 @@ page '/*.txt', layout: false
 
 # General configuration
 
+
 # Reload the browser automatically whenever files change
 configure :development do
   activate :livereload
@@ -29,6 +30,8 @@ activate :blog do |blog|
 end
 
 activate :sprockets
+
+activate :syntax
 
 activate :deploy do |deploy|
   deploy.deploy_method = :git

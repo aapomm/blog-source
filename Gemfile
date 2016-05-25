@@ -14,7 +14,4 @@ gem 'middleman-livereload'
 gem 'middleman-blog'
 gem "middleman-sprockets", "~> 4.0.0.rc"
 gem "middleman-deploy", "~> 2.0.0.pre.alpha"
-
-
-
-gem 'haml'
+gem "middleman-syntax"
