@@ -39,7 +39,10 @@ h2 {
 
 a {
   color: $red;
-  text-decoration: none;
+
+  &.no-underline {
+    text-decoration: none;
+  }
 }
 
 p {
@@ -102,8 +105,14 @@ figure {
   }
 }
 
-pre.highlight {
+pre.highlight code {
   font-size: 0.75em;
+}
+
+code {
+  background-color: rgba(0,0,0,0.1);
+  font-size: 0.85em;
+  padding: 0 0.2em;
 }
 
 .hidden {

@@ -24,7 +24,7 @@ And then you see, next to the commit hash, the perpetrator’s name and email al
 
 “I hate that guy”, you mutter under your breath as you concede to the fact that you were an idiot.
 
-This is me. I have experienced this more times than I care to admit, especially with seeing code made from where I was just starting out. But, as stupid as they may look, they serve as a good learning tool. As embarrassing as it is for me, I'm going to share some of those terribly written code so that we may learn from them (and you from yours --- unless of course you always write perfect code).
+I have experienced this more times than I care to admit, especially with seeing code made from where I was just starting out. But, as stupid as they may look, they serve as a good learning tool. As embarrassing as it is for me, I'm going to share some of those terribly written code so that we may learn from them (and you from yours --- unless of course you always write perfect code).
 
 
 ## I’m a Professional! I think.
@@ -35,10 +35,10 @@ This is me. I have experienced this more times than I care to admit, especially 
 
 ~~~ ruby
 
-  properties *( Date::ABBR_DAYNAMES.map { |day| day.downcase.to_sym } )
+properties *( Date::ABBR_DAYNAMES.map { |day| day.downcase.to_sym } )
 ~~~
 
-I remember writing this code and claiming it as the sexiest use of ruby statement yet! I took advantage of ruby’s splat operator coupled with some Enumerable magic to pass as arguments to `properties` (from [reform](https://github.com/apotonick/reform) gem). Looking back at this snippet, it doesn’t seem as beautiful as I thought it was. It’s frustratingly unreadable! Donald Knuth once said that programming is not telling the computer how to do something, it’s telling someone else how they would instruct the computer to do something. This mess clearly violates that.
+I remember writing this code and claiming it as the sexiest use of ruby statement yet! I took advantage of ruby’s splat operator coupled with some `Enumerable` magic to pass as arguments to `properties` (from [reform](https://github.com/apotonick/reform) gem). Looking back at this snippet, it doesn’t seem as beautiful as I thought it was. It’s frustratingly unreadable! Donald Knuth once said that programming is not telling the computer how to do something, it’s telling someone else how they would instruct the computer to do something. This mess clearly violates that.
 
 If I were to refactor this, I would instead loop through the days and call the singular method `property` for each of the days. It would be longer, but a lot more readable.
 
@@ -77,7 +77,7 @@ The obvious and simple fix here is to use the name `slot_assignments` instead of
   }
 
   > .large {
-    width: 23.33% !important;
+    width: 33.33% !important;
   }
 
   > .small {
@@ -127,18 +127,18 @@ render: function(){
 
 This snippet is from a ReactJS application that I helped develop. It uses JSX in its components which, in my opinion, looks ugly and out place. Though I think we can all agree that it works well with ReactJS and is a necessary evil. Sadly, this enabled me to create this monolithic chunk of disaster waiting to happen.
 
-If we’re talking about pure HTML, then there’s nothing wrong with this. But we’re not. The whole weight of the component seems to be resting solely in its `render` function. What if I later decide to add more columns, or more rows? What if I want to dynamically add the table data instead? What if, among all the rows of table data, I want to edit a single cell? This code will quickly go from 0 to 100 and will rapidly become unreadable and unmaintainable.
+If we’re talking about pure HTML, then there’s nothing wrong with this. HTML promotes this kind of horrific indentation. But this is not HTML. The whole weight of the component seems to be resting solely in its `render` function. What if I later decide to add more columns, or more rows? What if I want to dynamically add the table data instead? What if, among all the rows of table data, I want to edit a single cell? This code will quickly go from 0 to 100 and will rapidly become unreadable and unmaintainable.
 
 One way to fix this is to refactor the headers and the table body off the `render` function to their own corresponding functions (ex. `_tableHeader` and `_tableBody`). Then you simply call those functions in `render`. This way, if you ever have changes in the table header or in the table body, you would only have to change their respective functions and `render` will remain untouched.
 
 6+.
 
-And many more blunders such as functions that span hundreds of lines, obese MVC models, and multi-lined ternary operators that I'll save you from in the interest of brevity.
+I have encountered many more obvious past blunders such as methods that return `nil`, obese MVC models, and multi-lined ternary operators that I'll save you from in the interest of brevity.
 
 ## You should go and love yourself
-I hated my old code and their writer for giving me troubles in the present. But the hate I feel has a deeper meaning than just being pure loathe. This hate means that I acknowledged my past mistakes. This hate signifies that I have learned and will learn from these errors to avoid making them. This hate implies that I’m better than I was before. So ironically, this hate symbolizes love. Love for myself for improving. Love for myself today for being better than I was yesterday. And ultimately, love for myself for being one step closer to being a master of this craft.
+I hated my old code and the coder who wrote them for giving me troubles in the present. But the hate I feel has a deeper meaning than just being pure loathe. This hate means that I acknowledged my past mistakes. This hate signifies that I have learned from these errors to avoid making them. This hate implies that I’m better than I was before. So ironically, this hate symbolizes love. Love for myself for improving. Love for myself today for being better than I was yesterday. And ultimately, love for myself for being one step closer to being a master of this craft.
 
-I've learned not to be too hard on my self and accepted that making mistakes is part of being human. Besides, your past self makes mistakes so that your future self won't make them!
+I've learned not to be too hard on myself and accepted that making mistakes is part of being human. Nobody is perfect. Besides, your past self made mistakes so that your future self won't make them!
 
 I guess the takeaway from all of this is that, as cliche as it sounds, we shouldn’t be embarrassed by our mistakes. Instead, we should learn from them! As disciples of self-improvement, we must not stop learning so we can be the best we can be.
 
