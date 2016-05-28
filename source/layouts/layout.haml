@@ -17,4 +17,4 @@
   %body{:class => (page_classes)}
     .container
       = yield
-    = partial 'sidebar'
+    = partial 'sidebar' unless current_page.data.title == 'error'
