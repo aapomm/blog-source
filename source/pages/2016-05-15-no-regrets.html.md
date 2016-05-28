@@ -26,6 +26,14 @@ And then you see, next to the commit hash, the perpetrator’s name and email al
 
 I have experienced this more times than I care to admit, especially with seeing code made from where I was just starting out. But, as stupid as they may look, they serve as a good learning tool. As embarrassing as it is for me, I'm going to share some of those terribly written code so that we may learn from them (and you from yours --- unless of course you always write perfect code).
 
+<figure>
+  <img src='/images/no-regrets/patrick-dummy.png'></img>
+  <div>
+    <figcaption>
+      I think one of my coworkers wore this at some point. (from SpongeBob SquarePants)
+    </figcaption>
+  </div>
+</figure>
 
 ## I’m a Professional! I think.
 
@@ -137,6 +145,15 @@ I have encountered many more obvious past blunders such as methods that return `
 
 ## You should go and love yourself
 I hated my old code and the coder who wrote them for giving me troubles in the present. But the hate I feel has a deeper meaning than just being pure loathe. This hate means that I acknowledged my past mistakes. This hate signifies that I have learned from these errors to avoid making them. This hate implies that I’m better than I was before. So ironically, this hate symbolizes love. Love for myself for improving. Love for myself today for being better than I was yesterday. And ultimately, love for myself for being one step closer to being a master of this craft.
+
+<figure>
+  <img src='/images/no-regrets/predestination.png'></img>
+  <div>
+    <figcaption>
+      I love myself, but not this much. (from Predestination)
+    </figcaption>
+  </div>
+</figure>
 
 I've learned not to be too hard on myself and accepted that making mistakes is part of being human. Nobody is perfect. Besides, your past self made mistakes so that your future self won't make them!
 
