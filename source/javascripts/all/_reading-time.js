@@ -2,7 +2,7 @@ $(function(){
   var count = 0,
       readingTime = null;
 
-  $('p').each(function(){
+  $('p, li').each(function(){
     var length = $(this).text().split(' ').length;
 
     count += length;
